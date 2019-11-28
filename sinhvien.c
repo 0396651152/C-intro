@@ -2,24 +2,14 @@
 #include <stdlib.h>
 #include <string.h>
 #include <malloc.h>
-#include <cstring>
+
 typedef struct sinhvien
 {
     /* data */
     char name[30];
     char id[10];
 }sv;
-char *tachchuoi(char string[20]){
-    char *p = strtok(string," ");
-    int i = 0;
-    char result[5];
-    while (p != '\0'){
-        strcpy(result[i],p);
-        i++;
-        p = strtok('\0'," ");
-    }
-    return result[i-1];
-}
+
 void Inthongtin(sv dssv[],int total){
     
     for(int i=1;i<= total;i++){
